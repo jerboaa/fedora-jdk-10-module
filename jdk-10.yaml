@@ -2,6 +2,9 @@
 document: modulemd
 version: 2
 data:
+    name: jdk-10
+    stream: 10
+    version: 20180612
     summary: OpenJDK 10
     description: >-
         JDK 10 is the open-source reference implementation of the Java
