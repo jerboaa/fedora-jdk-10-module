@@ -4,7 +4,7 @@ version: 1
 data:
     name: jdk-10
     stream: 10
-    version: 20180613
+    version: 20180614
     summary: OpenJDK 10
     description: >-
         JDK 10 is the open-source reference implementation of the Java
