@@ -1,0 +1,38 @@
+---
+document: modulemd
+version: 2
+data:
+    summary: OpenJDK 10
+    description: >-
+        JDK 10 is the open-source reference implementation of the Java
+        SE 10 Platform as defined by JSR 383 in the Java Community Process.
+    license:
+        module:
+            - MIT
+    dependencies:
+        - buildrequires:
+            platform: [f28]
+          requires:
+            platform: [f28]
+    references:
+        documentation: http://openjdk.java.net/
+    profiles:
+        default:
+            rpms:
+                - java-10-openjdk-devel
+        minimal:
+            rpms:
+                - java-10-openjdk-headless
+        # A set of packages which should be installed into the buildroot of a
+        # module which depends on this module.  Specifically, it is used to
+        # flesh out the build group in koji.
+        buildroot:
+            rpms:
+                - java-10-openjdk-devel
+    components:
+        rpms:
+            java-10-openjdk:
+                rationale: OpenJDK 10 package.
+                repository: http://copr-dist-git.fedorainfracloud.org/git/jerboaa/openjdk-10/java-10-openjdk.git
+                # Build from branch f28
+                ref: f28
